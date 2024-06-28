@@ -1,0 +1,87 @@
+$color-accent: #f6b092;
+$font: "0xProto";
+$font-size: 14px;
+$background-color: #333;
+$padding:5px 10px;
+$border: 0px solid white;
+$border-radius: 20px;
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+  font-family: $font;
+  font-size: $font-size;
+}
+
+//Global Styles
+.bar {
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 4px 0px;
+}
+
+// Styles on classes (see eww.yuck for more information)
+
+.box {
+  background-color: $background-color;
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+}
+
+.sidestuff slider {
+  all: unset;
+  color: #ffd5cd;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.metric scale trough highlight {
+  all: unset;
+  background-color: $color-accent;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.label-ram {
+  font-size: large;
+}
+
+.workspaces button box {
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 150ms ease-in-out;
+}
+.workspaces button .inactive{
+  background: #000000;
+}
+.workspaces button .urgent{
+  background: #F88379;
+  color:black;
+}
+
+.active, .workspaces button:hover box{
+  background: $color-accent;
+  color: black;
+}
+

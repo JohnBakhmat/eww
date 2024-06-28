@@ -1,0 +1,10 @@
+#!/bin/sh
+
+workspaces(){
+	echo $(bun ~/.config/eww/scripts/workspaces.mjs)
+}
+
+workspaces
+i3-msg -t subscribe -m '[ "window","workspace" ]' \
+	| while read -r _; do workspaces
+done
