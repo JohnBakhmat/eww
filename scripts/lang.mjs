@@ -1,11 +1,12 @@
 import { $ } from "bun";
 const res = await $`xkblayout-state print "%s"`.text();
 
-const map = {
-  "us":"\uDBB9\uDCE6",
-  "ru":"\uDBB9\uDCEC",
+function getFlagEmoji(countryCode) {
+  const codePoints = countryCode
+    .toUpperCase()
+    .split("")
+    .map((char) => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
 }
 
-const flag = map[res] || "unknown code"
-
-console.log(flag)
+console.log(getFlagEmoji(res));
